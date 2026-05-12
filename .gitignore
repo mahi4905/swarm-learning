@@ -1,12 +1,10 @@
 .*swo
 .*swp
 **/__pycache__
-workspace/
 
 # Large data files and models
 *.bin
 *.json
-*.txt
 
 # Model files and checkpoints
 pytorch_model.bin
