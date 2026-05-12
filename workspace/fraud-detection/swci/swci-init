@@ -1,0 +1,15 @@
+wait for ip sn1
+create context test-fd with ip sn1
+switch context test-fd
+cd /platform/swarm/usr
+list tasks
+RESET TASKRUNNER defaulttaskbb.taskdb.sml.hpe
+ASSIGN TASK user_env_tf_build_task TO defaulttaskbb.taskdb.sml.hpe WITH 1 PEERS
+SLEEP 60
+ASSIGN TASK swarm_fd_task TO defaulttaskbb.taskdb.sml.hpe WITH 4 PEERS
+SLEEP 30
+PERFDATA defaultbb.cqdb.sml.hpe
+SLEEP 30
+PERFDATA defaultbb.cqdb.sml.hpe
+SLEEP 30
+PERFDATA defaultbb.cqdb.sml.hpe
