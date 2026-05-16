@@ -245,8 +245,8 @@ try:
         syncFrequency=512,
         minPeers=min_peers,
         useAdaptiveSync=False,
-        adsValData=(X[:100], X[:100]),
-        adsValBatchSize=batch_size
+        
+        
     )
     swarmCallback.logger.setLevel(logging.DEBUG)
     callbacks = [swarmCallback]
