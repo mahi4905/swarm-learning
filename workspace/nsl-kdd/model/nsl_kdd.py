@@ -242,7 +242,7 @@ combined_model.compile(
 try:
     from swarmlearning.tf import SwarmCallback
     swarmCallback = SwarmCallback(
-        syncFrequency=512,
+        syncFrequency=64,
         minPeers=min_peers,
         useAdaptiveSync=False,
         
@@ -250,7 +250,7 @@ try:
     )
     swarmCallback.logger.setLevel(logging.DEBUG)
     callbacks = [swarmCallback]
-    print(f'SwarmCallback enabled — syncFrequency=512, minPeers={min_peers}')
+    print(f'SwarmCallback enabled — syncFrequency=64, minPeers={min_peers}')
 except Exception:
     callbacks = []
     print('SwarmCallback not available — running in local mode')
